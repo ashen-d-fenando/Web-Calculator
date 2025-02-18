@@ -1,10 +1,7 @@
 
 # My First Programming Project
 
-I created a web-based calculator for my first programming project
-
-
-!(/images/WebCalculator.png)
+I created a "Web-Based Calculator" for my first programming project
 
 
 
@@ -13,5 +10,5 @@ I created a web-based calculator for my first programming project
 
 It looks like a simple project, but I did it to gain programming experience
 
-Especially, I learned more about HTML, CSS, and JavaScript
+Especially, I learned more about HTML, CSS, and JavaScript.
 
