@@ -1,97 +1,88 @@
-let dispaly = document.getElementById('display');
+let display = document.getElementById('display');
 let equelBtn = document.getElementById("equelBtn");
 let clearbtn = document.getElementById("clearbtn");
 let backSpacebtn = document.getElementById("backSpacebtn");
 
-
 //Functions for clear Display
 
 function clearDisplay(){
-  if (dispaly.value == "Syntax Error" || dispaly.value == 'Infinity' || dispaly.value =="undefined" ||  dispaly.value == "NaN") {
-    dispaly.value = '';
+  if (display.value == "Syntax Error" || display.value == 'Infinity' || display.value =="undefined" ||  display.value == "NaN") {
+    display.value = '';
   }
 }
 
-
 //Input only [0-9] numbera or [+ , * ,-,/] in keybord
-dispaly.addEventListener('input', function () {
+display.addEventListener('input', function () {
   clearDisplay();
   this.value = this.value.replace(/[^0-9+\-=\/\*\.]/g, '');
-  dispaly.focus();
+  display.focus();
 });
 
 // Adding Number input through button
 
 function addNum(num) {
-  if (dispaly.value.length < 15) {
+  if (display.value.length < 15) {
     clearDisplay();
-    dispaly.value = dispaly.value + num;
-    dispaly.focus();
+    display.value = display.value + num;
+    display.focus();
   }
 }
 
 //Adding operation through btn
 function addOperation(operation) {
-  if (dispaly.value.length < 13) {
+  if (display.value.length < 13) {
     clearDisplay();
-    dispaly.value = dispaly.value + operation;
-    dispaly.focus();
+    display.value = display.value + operation;
+    display.focus();
   }
 }
-
-
 
 //Equel Button 
 
 function equal() {
   try {
-    let resultValue = eval(dispaly.value);
-    dispaly.value = resultValue;
+    let resultValue = eval(display.value);
+    display.value = resultValue;
     console.log(resultValue);
   } catch (error) {
-    dispaly.value = 'Syntax Error';
+    display.value = 'Syntax Error';
     console.log(error);
   }
 }
 
 // Getting result when press Enter key 
-dispaly.addEventListener("keydown", function (e) {
+display.addEventListener("keydown", function (e) {
   if (e.key === "Enter") {
     e.preventDefault();
     equal();
   }
 })
 
-
 // Backspace button 
 
 backSpacebtn.addEventListener("click", function () {
   // Get current cursor positions
-  const start = dispaly.selectionStart;
-  const end = dispaly.selectionEnd;
-
+  const start = display.selectionStart;
+  const end = display.selectionEnd;
 
   if (start !== end) {
-    dispaly.value = dispaly.value.slice(0, start) + dispaly.value.slice(end);
-    dispaly.focus();
-    dispaly.setSelectionRange(start, start);
+    display.value = display.value.slice(0, start) + display.value.slice(end);
+    display.focus();
+    display.setSelectionRange(start, start);
   } else if (start > 0) {
-    dispaly.value =
-      dispaly.value.slice(0, start - 1) + dispaly.value.slice(end);
-    dispaly.focus();
-    dispaly.setSelectionRange(start - 1, start - 1);
+    display.value =
+      display.value.slice(0, start - 1) + display.value.slice(end);
+    display.focus();
+    display.setSelectionRange(start - 1, start - 1);
 
   } else {
-    dispaly.focus();
-
+    display.focus();
   }
-
 });
-
 
 //clear btn
 
 clearbtn.addEventListener("click",()=>{
-  dispaly.value = '';
-  dispaly.focus();
+  display.value = '';
+  display.focus();
 })
