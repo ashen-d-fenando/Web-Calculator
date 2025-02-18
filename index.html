@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!--Blur Circles for Styling-->
+  <div class="circle" id="c1"></div>
+  <div class="circle" id="c2"></div>
+
+
+  <!--Title-->
+  <h1 class="title">Web Calculator</h1>
+
+
+  <!--Claculator-->
+  <div class="cal_container">
+    <div class="cal_main">
+
+      
+      <!--Dispaly-->
+      <div>
+        <input type="text" autocomplete="off" placeholder="Type" value="" maxlength="15" id="display">
+      </div>
+
+      <!--Number Feilds-->
+      <div style="display: inline; background-color: rgb(114, 94, 13);">
+
+        <div class="num_field">
+
+          <div class="num_line">
+            <button class="numbers" onclick="addNum(7)">7</button>
+            <button class="numbers" onclick="addNum(8)">8</button>
+            <button class="numbers" onclick="addNum(9)">9</button>
+          </div>
+
+          <div class="num_line">
+            <button class="numbers" onclick="addNum(4)">4</button>
+            <button class="numbers" onclick="addNum(5)">5</button>
+            <button class="numbers" onclick="addNum(6)">6</button>
+          </div>
+
+          <div class="num_line">
+            <button class="numbers" onclick="addNum(1)">1</button>
+            <button class="numbers" onclick="addNum(2)">2</button>
+            <button class="numbers" onclick="addNum(3)">3</button>
+          </div>
+
+
+          <div class="num_line">
+            <span id="emptyBtn" ></span>
+            <button class="numbers" onclick="addNum(0)">0</button>
+            <button class="numbers" onclick="addNum('.')">.</button>
+          </div>
+
+        </div>
+
+        <!--Function Feild-->
+        <div class="func_feild">
+
+          <div class="func_line">
+            <button class="function" id="backSpacebtn">←</button>
+            <button class="function" id="clearbtn">C</button>
+          </div>
+
+          <div class="func_line">
+            <button class="function" onclick="addOperation('*')">x</button>
+            <button class="function" onclick="addOperation('+')">+</button>
+          </div>
+
+          <div class="func_line">
+            <button class="function" onclick="addOperation('/')">/</button>
+            <button class="function" onclick="addOperation('-')">-</button>
+          </div>
+
+          <div class="func_line">
+            <button id="equelBtn" onclick="equal()">=</button>
+            
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>

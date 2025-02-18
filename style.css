@@ -1,0 +1,203 @@
+body {
+  background-color: #373535;
+}
+
+
+/*Blur Circles */
+.circle {
+  background-color: #FFA600;
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  position: absolute;
+  z-index: -1;
+  filter: blur(150px);
+}
+
+#c2 {
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+}
+
+/*Title*/
+
+.title {
+  text-align: center;
+  font-size: 45px;
+  color: rgb(255, 206, 114);
+  text-shadow: 2px 2px 4px #000000;
+}
+
+
+
+/*Claculator*/
+
+.cal_container {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+
+.cal_main {
+  background-color: rgb(82, 83, 84);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: relative;
+  z-index: 1;
+  width: 419px;
+  height: 500px;
+  border-radius: 20px;
+}
+
+/*Claculator Dispaly*/
+
+#display {
+  width: 400px;
+  height: 55px;
+  margin: 20px 0px;
+  display: flex;
+  justify-self: center;
+  text-align: right;
+  font-size: 40px;
+  font-weight: bold;
+  outline: none;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #b7b2b2ac;
+  color: #423c3c;
+
+}
+
+/*Number Fields*/
+
+.num_field {
+  position: absolute;
+  width: 225px;
+  height: 380px;
+  margin-left: 4px;
+  margin-bottom: 4px;
+  display: inline;
+  z-index: 2;
+  left: 0;
+}
+
+.num_line {
+  width: 225px;
+  height: 95px;
+  display: flex;
+  justify-content: center;
+}
+
+.numbers {
+  width: 70px;
+  height: 85px;
+  margin: 2px;
+  border: solid black 1px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+
+#emptyBtn {
+  width: 70px;
+  height: 85px;
+  margin: 2px;
+  background-color: transparent;
+}
+
+
+/*Function Feilds*/
+
+.func_feild {
+  position: absolute;
+  width: 150px;
+  height: 380px;
+  display: inline;
+  z-index: 2;
+  right: 0;
+  margin-right: 5px;
+}
+
+.func_line {
+  width: 150px;
+  height: 95px;
+  display: flex;
+  justify-content: center;
+}
+
+.function {
+  width: 70px;
+  height: 85px;
+  margin: 2px;
+  margin-top: 5px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #fff5e7ec;
+
+}
+
+#equelBtn {
+  width: 95px;
+  height: 85px;
+  margin-top: 5px;
+  background-color: rgb(255, 206, 114);
+  border: solid black 1px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/*Styles, When max-width less that 480px */
+
+
+@media (max-width:480px) {
+
+  #display {
+    width: 300px;
+    font-size: 30px;
+  }
+
+  .cal_main {
+    width: 320px;
+    height: 450px;
+  }
+
+  .num_field {
+    width: 160px;
+  }
+
+  .num_line {
+    width: 190px;
+    height: 85px;
+  }
+
+  .numbers {
+    width: 65px;
+    height: 70px;
+  }
+
+  .func_feild {
+    width: 105px;
+  }
+
+  .func_line {
+    width: 105px;
+    height: 85px;
+  }
+
+  .function {
+    width: 55px;
+    height: 70px;
+  }
+
+  #equelBtn {
+    width: 85px;
+    height: 70px;
+  }
+
+}
