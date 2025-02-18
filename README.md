@@ -4,6 +4,11 @@
 I created a web-based calculator for my first programming project
 
 
+!(/images/WebCalculator.png)
+
+
+
+
 ## Lessons I Learned
 
 It looks like a simple project, but I did it to gain programming experience
