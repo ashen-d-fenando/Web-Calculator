@@ -7,7 +7,7 @@ let backSpacebtn = document.getElementById("backSpacebtn");
 //Functions for clear Display
 
 function clearDisplay(){
-  if (dispaly.value == "Syntax Error" || dispaly.value == 'Infinity' || dispaly.value =="undefined") {
+  if (dispaly.value == "Syntax Error" || dispaly.value == 'Infinity' || dispaly.value =="undefined" ||  dispaly.value == "NaN") {
     dispaly.value = '';
   }
 }
